@@ -1,0 +1,60 @@
+{% extends 'fittrack/layout.html' %}
+
+{% block title %} Workout Loging {% endblock %}
+
+{% block body %}
+<div class="container-custom container mt-4">
+
+<h2> Log your Workout</h2>
+
+<form method="post" id="workout-form" class="container mt-4">
+  {% csrf_token %}
+  {{ exercise_set_formset.management_form }}
+  <div id="exercise-set-container">
+    {% for form in exercise_set_formset %}
+      <div class="exercise-set-form border p-3 mb-3 rounded">
+        {{ form.exercise.label_tag }}
+        {{ form.exercise }}
+
+        {{ form.sets.label_tag }}
+        {{ form.sets }}
+
+        {{ form.reps.label_tag }}
+        {{ form.reps }}
+
+        {{ form.weight.label_tag }}
+        {{ form.weight }}
+
+        {{ form.intensity.label_tag }}
+        {{ form.intensity }} 
+      </div>
+    {% endfor %}
+  </div>
+
+  <button type="button" id="add-exercise-set" class="btn btn-primary my-3">Add Exercise Set</button>
+  <button type="submit" class="btn btn-success my-3">Log Workout</button>
+
+  <div id="empty-form" style="display: none;"><br><br>
+    {{ exercise_set_formset.empty_form.as_table }}
+  </div>
+</form>
+
+</div>
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+$(document).ready(function() {
+  $('#add-exercise-set').click(function() {
+    var newForm = $('#id_form-TOTAL_FORMS').val();
+    var exerciseSetContainer = $('#exercise-set-container');
+    var formHtml = '<div class="exercise-set-form">' + $('#empty-form').html().replace(/__prefix__/g, newForm) + '</div>';
+    exerciseSetContainer.append(formHtml);
+    $('#id_form-TOTAL_FORMS').val(parseInt(newForm) + 1);
+  });
+});
+</script>
+
+{% endblock %}

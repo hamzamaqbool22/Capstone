@@ -1,0 +1,35 @@
+{% extends 'fittrack/layout.html' %}
+
+{% block title %} Protein Calculator Result {% endblock %}
+
+{% block body %}
+<div class="container">
+    <h2 class="mt-5">Protein Calculator Result</h2>
+    <div class="table-responsive mt-3">
+        <table class="table table-bordered">
+            <tbody>
+                <tr>
+                    <th scope="row">Age:</th>
+                    <td>{{ protein_cal.age }}</td>
+                </tr>
+                <tr>
+                    <th scope="row">Weight (kg):</th>
+                    <td>{{ protein_cal.weight }} Kg</td>
+                </tr>
+                <tr>
+                    <th scope="row">Height (cm):</th>
+                    <td>{{ protein_cal.height }} cm</td>
+                </tr>
+                <tr>
+                    <th scope="row">Activity:</th>
+                    <td>{{ protein_cal.activity }}</td>
+                </tr>
+                <tr>
+                    <th scope="row">Calculated Protein Needs:</th>
+                    <td>{{ protein_needs }} grams</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}

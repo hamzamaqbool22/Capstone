@@ -1,0 +1,35 @@
+{% extends 'fittrack/layout.html' %}
+
+{% block title %} Calories Calculator Result {% endblock %}
+
+{% block body %}
+<div class="container">
+    <h2 class="mt-5">Calories Calculator Result</h2>
+    <div class="table-responsive mt-3">
+        <table class="table table-bordered">
+            <tbody>
+                <tr>
+                    <th scope="row">Age:</th>
+                    <td>{{ cal_count.age }}</td>
+                </tr>
+                <tr>
+                    <th scope="row">Weight (kg):</th>
+                    <td>{{ cal_count.weight }} Kg</td>
+                </tr>
+                <tr>
+                    <th scope="row">Height (cm):</th>
+                    <td>{{ cal_count.height }} cm</td>
+                </tr>
+                <tr>
+                    <th scope="row">Activity:</th>
+                    <td>{{ cal_count.activity }}</td>
+                </tr>
+                <tr>
+                    <th scope="row">Calculated Calories Needs:</th>
+                    <td>{{ total_cal }} Cal</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}

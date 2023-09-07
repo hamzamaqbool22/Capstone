@@ -1,0 +1,147 @@
+#exercise-set-container {
+    margin-top: 20px;
+}
+
+.exercise-set-form label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.container-custom {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+body {
+    background-color: rgb(214, 245, 255);
+    font-family: Verdana, Geneva, Tahoma, sans-serif
+}
+
+
+/* Custom CSS for homepage */
+.jumbotron {
+    background-color: #007bff;
+    color: #fff;
+    padding: 70px;
+    border-radius: 0;
+    margin-bottom: 40px;
+}
+
+.jumbotron h1 {
+    font-size: 48px;
+    font-weight: bold;
+}
+
+.jumbotron p {
+    font-size: 24px;
+}
+
+/* .btn-primary {
+    background-color: #fff;
+    color: #007bff;
+    border: none;
+    padding: 15px 30px;
+    font-size: 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+} */
+
+.btn-primary:hover {
+    background-color: #000000;
+    color: #fff;
+}
+
+.feature-box {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.feature-box h2 {
+    font-size: 32px;
+    font-weight: bold;
+    color: #333;
+}
+
+.feature-box p {
+    font-size: 20px;
+    color: #777;
+}
+
+/* Custom CSS for the footer */
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer p {
+    margin: 0;
+}
+
+.footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+body {
+    background-color: white;
+}
+
+
+/* Custom CSS for the navbar */
+.navbar {
+    background-color: #007bff; /* Navbar background color */
+    padding: 10px 0; /* Vertical padding for the navbar */
+}
+
+.navbar-brand {
+    color: #fff; /* Navbar brand text color */
+    font-size: 28px; /* Navbar brand font size */
+}
+
+.navbar-toggler-icon {
+    background-color: #fff; /* Navbar toggler icon color */
+}
+
+.navbar-nav .nav-link {
+    color: #fff; /* Navbar link text color */
+    font-size: 18px; /* Navbar link font size */
+    margin: 0 10px; /* Horizontal spacing between navbar links */
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ccc; /* Navbar link text color on hover */
+}
+
+.dropdown-menu {
+    background-color: #087bff; /* Dropdown menu background color */
+}
+
+.dropdown-item {
+    color: #fff; /* Dropdown item text color */
+}
+
+.dropdown-item:hover {
+    background-color: #ffffff; /* Dropdown item background color on hover */
+}
+
+.navbar-light .navbar-toggler-icon {
+    background-color: #fff;
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 10px;
+    }
+
+    .navbar-toggler {
+        margin-right: 10px;
+    }
+
+    .navbar-nav .nav-link {
+        margin: 10px 0;
+    }
+}

@@ -1,0 +1,16 @@
+{% extends 'fittrack/layout.html' %}
+
+{% block title %} Protien Calculator {% endblock %}
+
+{% block body %}
+<div class="container-custom container mt-4">
+    <h3>Calculate your daily intake of Protien</h3>
+    <form method="POST">
+    {% csrf_token %}
+    {{form.as_p}}
+
+    <button class="btn btn-primary" type="submit">Calculate</button>
+</form>
+
+</div>
+{% endblock %}
